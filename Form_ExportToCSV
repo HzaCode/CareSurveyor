@@ -1,0 +1,48 @@
+
+
+function exportFormResponses() {
+  try {
+    // Get form ID
+    const formId = "1FAIpQLSd2OJIHL1vjswyJaz_1pIpqaDCE5iAng";
+    
+    // Open form
+    const form = FormApp.openById(formId);
+    
+    // Get responses
+    const responses = form.getResponses();
+    
+    // Extract titles as CSV header
+    const items = form.getItems();
+    let headers = [];
+    items.forEach(item => headers.push(item.getTitle()));
+    let csvData = [headers];
+    
+    // Extract responses
+    responses.forEach(response => {
+      let row = [];
+      const itemResponses = response.getItemResponses();
+      
+      items.forEach(item => {
+        try {
+          const matchingResponse = itemResponses.find(res => res.getItem().getId() === item.getId());
+          row.push(matchingResponse ? matchingResponse.getResponse() : "");
+        } catch (e) {
+          row.push("");
+        }
+      });
+      csvData.push(row);
+    });
+    
+    // Convert to CSV string
+    let csvContent = csvData.map(row => row.join(",")).join("\n");
+    
+    // Save CSV to Drive
+    const folder = DriveApp.getRootFolder();
+    const fileName = "FormResponses.csv";
+    folder.createFile(fileName, csvContent);
+    
+    Logger.log("Export done, saved to Drive: " + fileName);
+  } catch (e) {
+    Logger.log("Error: " + e.message);
+  }
+}
