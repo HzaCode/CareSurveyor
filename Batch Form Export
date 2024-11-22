@@ -1,0 +1,80 @@
+function exportFormResponsesBatch() {
+  const lock = LockService.getScriptLock();
+  try {
+    // Get lock, wait max 10s
+    lock.waitLock(10000);
+
+    const formId = ""; // Form ID
+    const form = FormApp.openById(formId);
+    const responses = form.getResponses();
+
+    // Get all questions
+    const items = form.getItems();
+    let headers = items.map(item => item.getTitle());
+
+    // Add "Email" column
+    headers.unshift("email address");
+
+    const batchSize = 50; // Batch size
+
+    // Get last processed position
+    const scriptProperties = PropertiesService.getScriptProperties();
+    let start = parseInt(scriptProperties.getProperty('lastProcessedIndex')) || 0;
+
+    if (start >= responses.length) {
+      Logger.log("All responses processed.");
+      // Reset position
+      scriptProperties.deleteProperty('lastProcessedIndex');
+      return;
+    }
+
+    let csvData = [];
+
+    // Add headers if starting from 0
+    if (start === 0) {
+      csvData.push(headers);
+    }
+
+    // Calculate end index for batch
+    let end = Math.min(start + batchSize, responses.length);
+    let batchResponses = responses.slice(start, end);
+
+    batchResponses.forEach(resp => {
+      let row = [];
+      // Get email
+      const email = resp.getRespondentEmail();
+      row.push(email !== undefined ? email : "");
+
+      const itemResponses = resp.getItemResponses();
+      let responseMap = {};
+      itemResponses.forEach(itemResp => {
+        responseMap[itemResp.getItem().getId()] = itemResp.getResponse();
+      });
+
+      items.forEach(item => {
+        let responseValue = responseMap[item.getId()];
+        row.push(responseValue !== undefined ? responseValue : "");
+      });
+
+      csvData.push(row);
+    });
+
+    // Wrap fields in quotes
+    let csvContent = csvData.map(row => '"' + row.join('","') + '"').join("\n");
+
+    const folder = DriveApp.getRootFolder();
+    const fileName = `${Math.ceil(end / batchSize)}.csv`;
+    folder.createFile(fileName, csvContent, MimeType.CSV);
+
+    Logger.log(`Export done, saved to Drive: ${fileName}`);
+
+    // Update last processed position
+    scriptProperties.setProperty('lastProcessedIndex', end);
+
+  } catch (err) {
+    Logger.log("Error: " + err.message);
+  } finally {
+    // Release lock
+    lock.releaseLock();
+  }
+}
