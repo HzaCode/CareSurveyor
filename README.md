@@ -26,6 +26,4 @@ Main Features:
 | `Batch Form Export` | Google Forms batch export tool |
 | `Form_ExportToCSV` | Google Forms CSV export tool |
 | `logo.jpg` | Project logo |
-| `image/` | Image resources directory |
-
 ---
