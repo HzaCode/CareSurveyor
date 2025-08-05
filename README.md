@@ -1,7 +1,7 @@
 # CareSurveyor
 
 <div align="center">
-  <img src="./image/logo.jpg" alt="CareSurveyor Logo" width="120" height="120"/>
+  <img src="logo.jpg" alt="CareSurveyor Logo" width="120" height="120"/>
   
   *Questionnaire Design & Google Forms Tools*
 </div>
@@ -25,7 +25,7 @@ Main Features:
 | `inquiry_logic` | Questionnaire logic configuration file |
 | `Batch Form Export` | Google Forms batch export tool |
 | `Form_ExportToCSV` | Google Forms CSV export tool |
-| `image/logo.jpg` | Project logo |
+| `logo.jpg` | Project logo |
 | `image/` | Image resources directory |
 
 ---
