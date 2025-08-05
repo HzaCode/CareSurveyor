@@ -10,7 +10,7 @@
 
 **Survey management for clinical data collection (supports TCM/anticancer drug therapy studies).**
 
-A survey management system for clinical data collection, supporting Traditional Chinese Medicine (TCM) and anticancer drug therapy studies.
+
 
 Main Features:
 - **Clinical Survey Management** - Data collection workflows specifically designed for TCM and anticancer drug research
