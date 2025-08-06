@@ -3,7 +3,7 @@
 <div align="center">
   <img src="logo.jpg" alt="CareSurveyor Logo" width="120" height="120"/>
   
-  *Questionnaire Design & Google Forms Tools*
+  *Survey Automation Pipeline for Clinical Studies*
 </div>
 
 ## 📋 Project Description
