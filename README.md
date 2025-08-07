@@ -1,29 +1,22 @@
-# CareSurveyor
+<!-- CareSurveyor README -->
 
-<div align="center">
-  <img src="logo.jpg" alt="CareSurveyor Logo" width="120" height="120"/>
-  
-  *Survey Automation Pipeline for Clinical Studies*
-</div>
+<p align="center">
+  <img src="logo.jpg" alt="CareSurveyor Logo" width="200"/>
+</p>
 
-## 📋 Project Description
-
-**Survey management for clinical data collection (supports TCM/anticancer drug therapy studies).**
+<h1 align="center">CareSurveyor</h1>
+<p align="center"><em>Survey Automation Pipeline&nbsp;for Clinical Studies</em></p>
 
 
 
-Main Features:
-- **Clinical Survey Management** - Data collection workflows specifically designed for TCM and anticancer drug research
-- **Questionnaire Logic Design** - Structured clinical survey questionnaire design tools
-- **Google Forms Tools** - Data export and processing functions for Google Forms
-
-## 📁 File Description
-
-| File/Folder | Description |
-|------------|------|
-| `inquiry_logic2.py` | Questionnaire survey logic design script, generates visualization flowcharts |
-| `inquiry_logic` | Questionnaire logic configuration file |
-| `Batch Form Export` | Google Forms batch export tool |
-| `Form_ExportToCSV` | Google Forms CSV export tool |
-| `logo.jpg` | Project logo |
 ---
+
+
+## Installation
+
+```cmd
+> pip install CareSurveyor
+```
+
+
+
