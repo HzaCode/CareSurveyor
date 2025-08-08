@@ -18,9 +18,10 @@
   </a>
 
   <img src="https://img.shields.io/pypi/pyversions/CareSurveyor?style=flat-square" alt="Python Versions">
- <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/HzaCode/CareSurveyor?style=flat-square" alt="MIT License">
-  </a>
+<a href="https://opensource.org/licenses/MIT">
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License">
+</a>
+
 </p>
 ---
 
