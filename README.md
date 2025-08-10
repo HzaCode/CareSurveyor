@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">CareSurveyor</h1>
-<p align="center"><em>Survey Automation Framework&nbsp;for Clinical Studies</em></p>
+<p align="center"><em>Declare once. Deploy anywhere.<br/>Standardized, interoperable clinical surveys.</em></p>
 
 <p align="center">
 
@@ -18,14 +18,14 @@
   </a>
 
   <img src="https://img.shields.io/pypi/pyversions/CareSurveyor?style=flat-square" alt="Python Versions">
-<a href="https://opensource.org/licenses/MIT">
-  <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License">
-</a>
+  
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License">
+  </a>
 
 </p>
-
 
 ## Installation
 
 ```cmd
-> pip install CareSurveyor
+pip install CareSurveyor
