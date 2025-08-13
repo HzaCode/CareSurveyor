@@ -10,8 +10,7 @@
 <p align="center">
 
   
-    <img src="https://img.shields.io/badge/Status-In%20Submission-orange?style=flat-square&logo=openaccess" alt="In Submission">
-  </a>
+    
 
   <a href="https://pypi.org/project/CareSurveyor/">
     <img src="https://img.shields.io/pypi/v/CareSurveyor?style=flat-square" alt="PyPI Version">
