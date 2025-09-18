@@ -1,7 +1,7 @@
 <!-- CareSurveyor README -->
 
 <p align="center">
-  <img src="logo.jpg" alt="CareSurveyor Logo" width="180">
+ 
 </p>
 
 <h1 align="center">CareSurveyor</h1>
