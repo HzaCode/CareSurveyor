@@ -21,7 +21,4 @@
   </a>
 </p>
 
-## Installation
 
-```cmd
-pip install CareSurveyor
