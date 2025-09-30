@@ -12,10 +12,7 @@
     <img src="https://img.shields.io/pypi/v/CareSurveyor?style=flat-square" alt="PyPI Version">
   </a>
   <img src="https://img.shields.io/pypi/pyversions/CareSurveyor?style=flat-square" alt="Python Versions">
- <!-- In Submission -->
-  <a href="#">
-    <img src="https://img.shields.io/badge/status-in%20submission-lightgrey" alt="in submission">
-  </a>
+ 
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License">
   </a>
