@@ -5,6 +5,11 @@
 </p>
 
 <h1 align="center">CareSurveyor</h1>
+<p align="center">
+  <a href="https://pepy.tech/project/caresurveyor">
+    <img src="https://img.shields.io/pepy/dt/caresurveyor?style=for-the-badge&color=306998&label=Downloads&logo=python" alt="Total Downloads"/>
+  </a>
+</p>
 <p align="center"><em>Declare once. Deploy anywhere.<br/>Standardized, interoperable clinical surveys.</em></p>
 
 <p align="center">
